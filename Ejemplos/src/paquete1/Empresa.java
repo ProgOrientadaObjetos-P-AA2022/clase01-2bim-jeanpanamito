@@ -90,8 +90,9 @@ public class Empresa {
                     obtenerEdificios()[i].obtenerNombre().toUpperCase(),
                     obtenerEdificios()[i].obtenerCosto());
         }
-        reporte = String.format("%s Total de inmuebles: %.1f\n", reporte, obtenerCostoEdificio());
-        reporte = String.format("\n%s Lista de Autos\n", reporte);
+        reporte = String.format("%sTotal de inmuebles: %.1f\n", reporte, obtenerCostoEdificio());
+      
+        reporte = String.format("\n%sLista de Autos\n", reporte);
         for (int i = 0; i < vehiculos.length; i++) {
             reporte = String.format("%s%d. %s,%s (%.1f)\n", reporte, i + 1,
                     obtenerVehiculos()[i].obtenerTipo(),
@@ -99,8 +100,8 @@ public class Empresa {
                     obtenerVehiculos()[i].obtenerValor());
 
         }
-        reporte= String.format("\n%s Total de inmuebles: %.1f\n",reporte, obtenerCostoVehiculos());
-        reporte= String.format("\n%s Total de Bienes: %.1f\n", reporte, obtenerCostoBienesInmuebles());
+        reporte= String.format("\n%sTotal de inmuebles: %.1f\n",reporte, obtenerCostoVehiculos());
+        reporte= String.format("\n%sTotal de Bienes: %.1f\n", reporte, obtenerCostoBienesInmuebles());
         return reporte;
     }
 
